@@ -8,54 +8,56 @@
 
 @layer base {
   :root {
-    /* Dark theme primary colors */
-    --background: 222 23% 5%;
-    --foreground: 210 40% 98%;
+    /* Light theme with green/blue colors */
+    --background: 0 0% 100%;
+    --foreground: 158 64% 10%;
 
-    --card: 222 23% 7%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 158 64% 10%;
 
-    --popover: 222 23% 7%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 158 64% 10%;
 
-    /* ShARE brand colors - blue primary */
-    --primary: 205 100% 56%;
-    --primary-foreground: 222 23% 5%;
-    --primary-dark: 205 100% 45%;
-    --primary-light: 205 100% 65%;
+    /* Green primary colors */
+    --primary: 158 64% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 158 64% 35%;
+    --primary-light: 158 64% 55%;
 
-    --secondary: 215 28% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 158 30% 94%;
+    --secondary-foreground: 158 64% 15%;
 
-    --muted: 215 28% 12%;
-    --muted-foreground: 217 10% 64%;
+    --muted: 158 20% 96%;
+    --muted-foreground: 158 30% 40%;
 
-    --accent: 205 100% 56%;
-    --accent-foreground: 222 23% 5%;
+    --accent: 210 100% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 215 28% 15%;
-    --input: 215 28% 15%;
-    --ring: 205 100% 56%;
+    --border: 158 30% 85%;
+    --input: 158 30% 85%;
+    --ring: 158 64% 45%;
 
     --radius: 0.75rem;
 
     /* Navigation and sidebar */
-    --nav-background: 222 23% 5%;
-    --nav-foreground: 210 40% 98%;
-    --nav-active: 205 100% 56%;
+    --nav-background: 0 0% 100%;
+    --nav-foreground: 158 64% 10%;
+    --nav-active: 158 64% 45%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(205 100% 56%), hsl(205 100% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(222 23% 5%), hsl(215 28% 7%));
-    --gradient-card: linear-gradient(145deg, hsl(222 23% 7%), hsl(215 28% 9%));
+    --gradient-primary: linear-gradient(135deg, hsl(158 64% 45%), hsl(158 64% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(158 30% 97%), hsl(210 100% 97%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(158 30% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(210 100% 55%), hsl(210 100% 45%));
 
     /* Shadows and effects */
-    --shadow-primary: 0 10px 40px -10px hsl(205 100% 56% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(222 23% 3% / 0.5);
-    --shadow-glow: 0 0 40px hsl(205 100% 56% / 0.4);
+    --shadow-primary: 0 10px 40px -10px hsl(158 64% 45% / 0.2);
+    --shadow-card: 0 10px 30px -10px hsl(158 30% 80% / 0.3);
+    --shadow-glow: 0 0 40px hsl(158 64% 45% / 0.3);
+    --shadow-accent: 0 10px 40px -10px hsl(210 100% 55% / 0.2);
 
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -108,6 +110,40 @@
 }
 
 @layer components {
+  /* Scroll animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-from-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-from-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .animate-from-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-from-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   /* Hero section animations */
   .hero-fade-in {
     animation: fadeInUp 0.8s ease-out forwards;
@@ -143,10 +179,10 @@
     box-shadow: var(--shadow-glow);
   }
 
-  /* Glass morphism */
+  /* Glass morphism for light theme */
   .glass {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(158, 158, 158, 0.2);
   }
 }

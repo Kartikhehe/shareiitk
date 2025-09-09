@@ -1,27 +1,41 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Briefcase, Award, Globe } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import akshatImage from "@/assets/akshat-chouksey.jpg";
+import shikiharImage from "@/assets/shikihar-chaudhary.jpg";
+import manyaImage from "@/assets/manya-gupta.jpg";
+import keshavImage from "@/assets/keshav-khandelwal.jpg";
 
 const Team = () => {
+  const teamRef = useScrollAnimation();
+  const highlightsRef = useScrollAnimation();
+  const leadershipRef = useScrollAnimation();
+  const headsRef = useScrollAnimation();
+
   const leadership = [
     {
       name: "Akshat Chouksey",
       position: "President",
-      department: "Leadership"
+      department: "Leadership",
+      image: akshatImage
     },
     {
       name: "Shikihar Chaudhary",
       position: "Vice President, External Affairs",
-      department: "External Relations"
+      department: "External Relations",
+      image: shikiharImage
     },
     {
       name: "Manya Gupta",
       position: "Vice President, Events & Internal Affairs",
-      department: "Operations"
+      department: "Operations",
+      image: manyaImage
     },
     {
       name: "Keshav Khandelwal",
       position: "Vice President, Startups",
-      department: "Business Development"
+      department: "Business Development",
+      image: keshavImage
     }
   ];
 
@@ -59,7 +73,7 @@ const Team = () => {
   return (
     <section id="team" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div ref={teamRef} className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Our <span className="text-primary">Team</span>
           </h2>
@@ -69,7 +83,7 @@ const Team = () => {
         </div>
 
         {/* Team Highlights */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div ref={highlightsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 animate-on-scroll">
           {highlights.map((highlight, index) => (
             <Card key={index} className="bg-gradient-card border-border hover:shadow-primary transition-smooth group text-center">
               <CardContent className="p-6">
@@ -85,15 +99,19 @@ const Team = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Leadership Team */}
-          <div>
+          <div ref={leadershipRef} className="animate-from-left">
             <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Leadership Team</h3>
             <div className="space-y-4">
               {leadership.map((member, index) => (
                 <Card key={index} className="bg-gradient-card border-border hover:shadow-primary transition-smooth group">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Users className="w-6 h-6 text-primary" />
+                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20">
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="flex-1">
                         <h4 className="text-lg font-semibold text-foreground group-hover:text-primary transition-smooth">{member.name}</h4>
@@ -108,7 +126,7 @@ const Team = () => {
           </div>
 
           {/* Department Heads */}
-          <div>
+          <div ref={headsRef} className="animate-from-right">
             <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Department Heads</h3>
             <div className="grid gap-4">
               {heads.map((head, index) => (

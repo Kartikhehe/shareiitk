@@ -1,8 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, TrendingUp, Globe2, Users2 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import teamImage from "@/assets/team-collaboration.jpg";
 
 const About = () => {
+  const aboutRef = useScrollAnimation();
+  const leftRef = useScrollAnimation();
+  const rightRef = useScrollAnimation();
+  const objectivesRef = useScrollAnimation();
+  const capabilitiesRef = useScrollAnimation();
+
   const objectives = [
     {
       icon: Target,
@@ -33,7 +40,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Content */}
-          <div className="space-y-6">
+          <div ref={leftRef} className="space-y-6 animate-from-left">
             <div>
               <h2 className="text-4xl font-bold text-foreground mb-4">
                 ShARE <span className="text-primary">IIT Kanpur</span>
@@ -51,7 +58,7 @@ const About = () => {
           </div>
 
           {/* Image */}
-          <div className="relative">
+          <div ref={rightRef} className="relative animate-from-right">
             <div className="rounded-2xl overflow-hidden shadow-card">
               <img 
                 src={teamImage} 
@@ -63,7 +70,7 @@ const About = () => {
         </div>
 
         {/* Objectives */}
-        <div className="mb-20">
+        <div ref={objectivesRef} className="mb-20 animate-on-scroll">
           <h3 className="text-3xl font-bold text-center text-foreground mb-12">Our Objectives</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {objectives.map((objective, index) => (
@@ -81,7 +88,7 @@ const About = () => {
         </div>
 
         {/* Capabilities */}
-        <div>
+        <div ref={capabilitiesRef} className="animate-on-scroll">
           <h3 className="text-3xl font-bold text-center text-foreground mb-12">What We Do</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {capabilities.map((capability, index) => (

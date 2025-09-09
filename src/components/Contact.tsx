@@ -1,9 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Instagram, Linkedin, MapPin, Phone } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import globalNetworkImage from "@/assets/global-network.jpg";
 
 const Contact = () => {
+  const contactRef = useScrollAnimation();
+  const leftRef = useScrollAnimation();
+  const rightRef = useScrollAnimation();
+
   const contactMethods = [
     {
       icon: Instagram,
@@ -44,7 +49,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div ref={contactRef} className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Get In <span className="text-primary">Touch</span>
           </h2>
@@ -55,7 +60,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div ref={leftRef} className="space-y-8 animate-from-left">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">Connect With Us</h3>
               <div className="space-y-4">
@@ -106,7 +111,7 @@ const Contact = () => {
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 Whether you're a startup looking for strategic consulting, an organization seeking social impact solutions, or a student interested in joining our network, we'd love to hear from you.
               </p>
-              <Button variant="hero" className="w-full">
+              <Button className="w-full bg-gradient-primary hover:shadow-glow transition-smooth">
                 <Mail className="w-4 h-4 mr-2" />
                 Send us a Message
               </Button>
@@ -114,7 +119,7 @@ const Contact = () => {
           </div>
 
           {/* Visual Element */}
-          <div className="relative">
+          <div ref={rightRef} className="relative animate-from-right">
             <div className="rounded-2xl overflow-hidden shadow-card">
               <img 
                 src={globalNetworkImage} 
