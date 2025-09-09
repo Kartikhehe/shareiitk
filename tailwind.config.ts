@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -22,6 +25,8 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          dark: "hsl(var(--primary-dark))",
+          light: "hsl(var(--primary-light))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -62,6 +67,20 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-card': 'var(--gradient-card)',
+      },
+      boxShadow: {
+        'primary': 'var(--shadow-primary)',
+        'card': 'var(--shadow-card)',
+        'glow': 'var(--shadow-glow)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       keyframes: {
         "accordion-down": {
