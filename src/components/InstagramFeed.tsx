@@ -15,31 +15,31 @@ const InstagramFeed = () => {
   const instagramPosts = [
     {
       id: 1,
-      image: "../src/assets/image1.png",
+      image: "../public/images/image1.png",
       caption: "CFA Guidance session",
       link: "https://www.instagram.com/p/DQfP435E24H/"
     },
     {
       id: 2,
-      image: "../src/assets/image2.png",
+      image: "../public/images/image2.png",
       caption: "MBA Guidance Session",
       link: "https://www.instagram.com/p/DMxzN5yT6pJ/"
     },
     {
       id: 3,
-      image: "../src/assets/image3.png",
+      image: "../public/images/image3.png",
       caption: "Meet our complete team",
       link: "https://www.instagram.com/p/DLHvd-MM-KO/?img_index=1"
     },
     {
       id: 4,
-      image: "../src/assets/image4.png",
+      image: "../public/images/image4.png",
       caption: "We are back!!!",
       link: "https://www.instagram.com/p/DKL92mrsjEJ/?img_index=1"
     },
     {
       id: 5,
-      image: "../src/assets/image5.png",
+      image: "../public/images/image5.png",
       caption: "Past Tenure projects",
       link: "https://www.instagram.com/p/Cue2hy5p1NE/?img_index=1/"
     }

@@ -1,16 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Briefcase, Award, Globe, Linkedin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import akshatImage from "@/assets/akshat-chouksey.jpg";
-import shikiharImage from "@/assets/shikihar-chaudhary.jpg";
-import manyaImage from "@/assets/manya-gupta.jpg";
-import keshavImage from "@/assets/keshav-khandelwal.jpg";
-import Kartikimage from "@/assets/kartik.jpg";
-import Ayushimage from "@/assets/ayush.jpg";
-import Akshatimage from "@/assets/akshat.jpg";
-import Adityaimage from "@/assets/aditya.jpg";
-import Khushimage from "@/assets/khush.jpg";
-import Aayushmanimage from "@/assets/aayushman.jpg";
+import akshatImage from "../../public/images/akshat-chouksey.jpg";
+import shikiharImage from "../../public/images/shikihar-chaudhary.jpg";
+import manyaImage from "../../public/images/manya-gupta.jpg";
+import keshavImage from "../../public/images/keshav-khandelwal.jpg";
+import Kartikimage from "../../public/images/kartik.jpg";
+import Ayushimage from "../../public/images/ayush.jpg";
+import Akshatimage from "../../public/images/akshat.jpg";
+import Adityaimage from "../../public/images/aditya.jpg";
+import Khushimage from "../../public/images/khush.jpg";
+import Aayushmanimage from "../../public/images/aayushman.jpg";
 
 import { useState } from "react";
 
