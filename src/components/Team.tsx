@@ -1,10 +1,69 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Briefcase, Award, Globe } from "lucide-react";
+import { Users, Briefcase, Award, Globe, Linkedin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import akshatImage from "@/assets/akshat-chouksey.jpg";
 import shikiharImage from "@/assets/shikihar-chaudhary.jpg";
 import manyaImage from "@/assets/manya-gupta.jpg";
 import keshavImage from "@/assets/keshav-khandelwal.jpg";
+import { useState } from "react";
+
+interface TeamMember {
+  name: string;
+  position: string;
+  department: string;
+  image?: string;
+  info: string;
+  linkedin: string;
+}
+
+const TeamMemberCard = ({ member, isHead = false }: { member: TeamMember; isHead?: boolean }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <Card 
+      className="bg-gradient-card border-border hover:shadow-primary transition-smooth group overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <CardContent className="p-0">
+        <div className="relative">
+          {member.image ? (
+            <div className="relative h-64 overflow-hidden">
+              <img 
+                src={member.image} 
+                alt={member.name}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className={`absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <p className="text-sm text-foreground leading-relaxed mb-3">{member.info}</p>
+                  <a 
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-smooth"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span className="text-sm font-medium">LinkedIn Profile</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="h-64 bg-gradient-primary flex items-center justify-center">
+              <Briefcase className="w-20 h-20 text-primary-foreground opacity-50" />
+            </div>
+          )}
+        </div>
+        <div className="p-6">
+          <h4 className="text-xl font-semibold text-foreground mb-1 group-hover:text-primary transition-smooth">{member.name}</h4>
+          <p className="text-primary font-medium mb-1">{member.position}</p>
+          <p className="text-sm text-muted-foreground">{member.department}</p>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
 
 const Team = () => {
   const teamRef = useScrollAnimation();
@@ -16,35 +75,73 @@ const Team = () => {
     {
       name: "Akshat Chouksey",
       position: "President",
-      department: "Leadership",
-      image: akshatImage
-    },
-    {
-      name: "Shikihar Chaudhary",
-      position: "Vice President, External Affairs",
-      department: "External Relations",
-      image: shikiharImage
-    },
-    {
-      name: "Manya Gupta",
-      position: "Vice President, Events & Internal Affairs",
-      department: "Operations",
-      image: manyaImage
+      department: "Electrical Engineering",
+      image: akshatImage,
+      info: "4th year undergrad | VC @Campus fund | President, ShARE IITK | Ex GenAI Intern @PwC",
+      linkedin: "https://www.linkedin.com/in/akshat-chouksey-034539253/"
     },
     {
       name: "Keshav Khandelwal",
       position: "Vice President, Startups",
       department: "Business Development",
-      image: keshavImage
+      image: keshavImage,
+      info: "Full Stack intern at GrubWala",
+      linkedin: "https://www.linkedin.com/in/keshav-khandelwal-6b0270184/"
+    },
+    {
+      name: "Manya Gupta",
+      position: "Vice President, Events & Internal Affairs",
+      department: "Operations",
+      image: manyaImage,
+      info: "Business Analyst Intern @Vedanta Ltd. | 4th year undergrad",
+      linkedin: "https://www.linkedin.com/in/manya-gupta"
+    },
+    {
+      name: "Shikhar Chaudhary",
+      position: "Vice President, External Affairs",
+      department: "External Relations",
+      image: shikiharImage,
+      info: "4th year undergrad",
+      linkedin: "https://www.linkedin.com/in/shikhar-chaudhary-03bb61255/"
     }
   ];
 
   const heads = [
-    { name: "Aditya Sati", position: "Head" },
-    { name: "Akshat Garg", position: "Head" },
-    { name: "Kartik Raj", position: "Head" },
-    { name: "Aayushman", position: "Head" },
-    { name: "Khush Maheswari", position: "Head" }
+    { 
+      name: "Aayushman Kumar", 
+      position: "Head",
+      department: "Civil Engineering",
+      info: "3rd Year | Upcoming SDE intern at Flipkart",
+      linkedin: "https://www.linkedin.com/in/aayushmankumar"
+    },
+    { 
+      name: "Aditya Sati", 
+      position: "Head",
+      department: "Civil Engineering",
+      info: "3rd Year | Upcoming Summer Intern at Battery Smart as Strategy and Operations Intern",
+      linkedin: "https://www.linkedin.com/in/aditya-sati-55a94a2a3/"
+    },
+    { 
+      name: "Akshat Garg", 
+      position: "Head",
+      department: "Materials Science and Engineering",
+      info: "3rd Year | Upcoming Intern at Deutsche Bank",
+      linkedin: "https://www.linkedin.com/in/akshat-garg-a188b7230/"
+    },
+    { 
+      name: "Kartik Raj", 
+      position: "Head",
+      department: "Mechanical Engineering",
+      info: "3rd Year | Incoming SDE intern at IBY, Japan",
+      linkedin: "https://www.linkedin.com/in/kartikr23/"
+    },
+    { 
+      name: "Khush Maheshwari", 
+      position: "Head",
+      department: "Economic Sciences",
+      info: "3rd Year | Upcoming summer Intern at Nomura",
+      linkedin: "https://www.linkedin.com/in/khush-maheshwari-031187274/"
+    }
   ];
 
   const highlights = [
@@ -101,26 +198,9 @@ const Team = () => {
           {/* Leadership Team */}
           <div ref={leadershipRef} className="animate-from-left">
             <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Leadership Team</h3>
-            <div className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-6">
               {leadership.map((member, index) => (
-                <Card key={index} className="bg-gradient-card border-border hover:shadow-primary transition-smooth group">
-                  <CardContent className="p-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20">
-                        <img 
-                          src={member.image} 
-                          alt={member.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-lg font-semibold text-foreground group-hover:text-primary transition-smooth">{member.name}</h4>
-                        <p className="text-primary font-medium">{member.position}</p>
-                        <p className="text-sm text-muted-foreground">{member.department}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <TeamMemberCard key={index} member={member} />
               ))}
             </div>
           </div>
@@ -128,21 +208,9 @@ const Team = () => {
           {/* Department Heads */}
           <div ref={headsRef} className="animate-from-right">
             <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Department Heads</h3>
-            <div className="grid gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {heads.map((head, index) => (
-                <Card key={index} className="bg-gradient-card border-border hover:shadow-primary transition-smooth group">
-                  <CardContent className="p-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Briefcase className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-foreground group-hover:text-primary transition-smooth">{head.name}</h4>
-                        <p className="text-primary font-medium">{head.position}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <TeamMemberCard key={index} member={head} isHead />
               ))}
             </div>
           </div>

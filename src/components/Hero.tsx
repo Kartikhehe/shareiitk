@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Users, Award } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import heroImage from "@/assets/share-hero-bg.jpg";
+import heroImage from "@/assets/hero-light-bg.jpg";
+import shareLogo from "@/assets/share-iitk-logo.png";
 
 const Hero = () => {
   const heroRef = useScrollAnimation();
@@ -24,9 +25,12 @@ const Hero = () => {
           <div ref={heroRef} className="space-y-8 animate-on-scroll">
             <div className="space-y-4">
               <div className="hero-fade-in">
-                <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-                  <Globe className="w-4 h-4" />
-                  <span>Global Community</span>
+                <div className="flex items-center gap-4 mb-6">
+                  <img src={shareLogo} alt="ShARE IITK Logo" className="w-20 h-20 object-contain" />
+                  <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                    <Globe className="w-4 h-4" />
+                    <span>Global Community</span>
+                  </div>
                 </div>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
                   Global ShARE
