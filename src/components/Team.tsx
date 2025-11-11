@@ -129,6 +129,13 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/akshat-garg-a188b7230/"
     },
     { 
+      name: "Ayush Kumar Singh", 
+      position: "Head",
+      department: "Business",
+      info: "Incoming intern at BNY Mellon",
+      linkedin: "https://www.linkedin.com/in/ayush-kumar-singh-7763b733a/"
+    },
+    { 
       name: "Kartik Raj", 
       position: "Head",
       department: "Mechanical Engineering",
@@ -194,25 +201,31 @@ const Team = () => {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Leadership Team */}
-          <div ref={leadershipRef} className="animate-from-left">
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Leadership Team</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {leadership.map((member, index) => (
-                <TeamMemberCard key={index} member={member} />
-              ))}
-            </div>
+        {/* President */}
+        <div ref={leadershipRef} className="animate-on-scroll mb-16">
+          <h3 className="text-2xl font-bold text-foreground mb-8 text-center">President</h3>
+          <div className="max-w-md mx-auto">
+            <TeamMemberCard member={leadership[0]} />
           </div>
+        </div>
 
-          {/* Department Heads */}
-          <div ref={headsRef} className="animate-from-right">
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Department Heads</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {heads.map((head, index) => (
-                <TeamMemberCard key={index} member={head} isHead />
-              ))}
-            </div>
+        {/* Vice Presidents */}
+        <div ref={leadershipRef} className="animate-from-left mb-16">
+          <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Vice Presidents</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {leadership.slice(1).map((member, index) => (
+              <TeamMemberCard key={index} member={member} />
+            ))}
+          </div>
+        </div>
+
+        {/* Department Heads */}
+        <div ref={headsRef} className="animate-from-right">
+          <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Department Heads</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {heads.map((head, index) => (
+              <TeamMemberCard key={index} member={head} isHead />
+            ))}
           </div>
         </div>
 
