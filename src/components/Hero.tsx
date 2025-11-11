@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Users, Award } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroImage from "@/assets/iitk-library.png";
-import shareLogo from "@/assets/share-iitk-logo.png";
 
 const Hero = () => {
   const heroRef = useScrollAnimation();
@@ -25,13 +24,17 @@ const Hero = () => {
           <div ref={heroRef} className="space-y-8 animate-on-scroll max-w-4xl">
             <div className="space-y-6">
               <div className="hero-fade-in flex flex-col items-center">
-                <img src={shareLogo} alt="ShARE IITK Logo" className="w-24 h-24 object-contain mb-6" />
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+                <h1 className="text-6xl sm:text-7xl lg:text-8xl font-playfair font-black text-white leading-tight drop-shadow-2xl tracking-tight">
                   ShARE IITK
                 </h1>
-                <p className="text-xl sm:text-2xl text-white/90 mt-4 font-medium drop-shadow-md">
-                  IIT Kanpur chapter of DO WELL DO GOOD - Future leaders program
-                </p>
+                <div className="mt-6 text-center space-y-3">
+                  <p className="text-xl sm:text-2xl text-white/95 font-inter font-semibold drop-shadow-lg">
+                    IIT Kanpur chapter of DO WELL DO GOOD - Future leaders program
+                  </p>
+                  <p className="text-base sm:text-lg text-white/80 font-inter drop-shadow-md max-w-2xl">
+                    A student-run consulting organization empowering businesses and non-profits through strategic solutions
+                  </p>
+                </div>
               </div>
             </div>
 

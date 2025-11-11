@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import shareLogo from "@/assets/share-iitk-logo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,12 +19,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">S</span>
+          <div className="flex items-center gap-3">
+            <img src={shareLogo} alt="ShARE IITK Logo" className="w-10 h-10 object-contain" />
+            <div className="flex items-center gap-2">
+              <span className="text-xl font-bold text-foreground">ShARE</span>
+              <span className="text-sm text-muted-foreground hidden sm:block">IIT Kanpur</span>
             </div>
-            <span className="text-xl font-bold text-foreground">ShARE</span>
-            <span className="text-sm text-muted-foreground hidden sm:block">IIT Kanpur</span>
           </div>
 
           {/* Desktop Navigation */}
