@@ -1,151 +1,166 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Instagram, Linkedin, MapPin, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import globalNetworkImage from "@/assets/global-network.jpg";
 
 const Contact = () => {
   const contactRef = useScrollAnimation();
-  const leftRef = useScrollAnimation();
-  const rightRef = useScrollAnimation();
 
-  const contactMethods = [
+  const teamContacts = [
     {
-      icon: Instagram,
-      label: "Instagram",
-      value: "@share_iitkanpur",
-      href: "https://instagram.com/share_iitkanpur",
-      color: "hover:text-pink-500"
+      name: "Akshat Chouksey",
+      role: "President, ShARE IITK",
+      email: "akshatc22@iitk.ac.in",
+      linkedin: "https://www.linkedin.com/in/akshat-chouksey-034539253/"
     },
     {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "ShARE IIT Kanpur",
-      href: "https://linkedin.com/company/share-iit-kanpur",
-      color: "hover:text-blue-600"
+      name: "Manya Gupta",
+      role: "Vice President",
+      linkedin: "https://www.linkedin.com/in/manya-gupta/"
     },
     {
-      icon: Mail,
-      label: "Email",
-      value: "contact@shareiitk.com",
-      href: "mailto:contact@shareiitk.com",
-      color: "hover:text-primary"
-    }
-  ];
-
-  const officeInfo = [
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "IIT Kanpur, Uttar Pradesh, India"
+      name: "Keshav Khandelwal",
+      role: "Vice President",
+      linkedin: "https://www.linkedin.com/in/keshav-khandelwal-6b0270184/"
     },
     {
-      icon: Phone,
-      label: "Network",
-      value: "Global presence across 41 countries"
+      name: "Shikhar Choudhary",
+      role: "Vice President",
+      linkedin: "https://www.linkedin.com/in/shikhar-chaudhary-03bb61255/"
+    },
+    {
+      name: "Aditya Sati",
+      role: "Head",
+      linkedin: "https://www.linkedin.com/in/aditya-sati-55a94a2a3/"
+    },
+    {
+      name: "Khush Maheshwari",
+      role: "Head",
+      linkedin: "https://www.linkedin.com/in/khush-maheshwari-031187274/"
+    },
+    {
+      name: "Aayushman Kumar",
+      role: "Head",
+      linkedin: "https://www.linkedin.com/in/aayushmankumar"
+    },
+    {
+      name: "Akshat Garg",
+      role: "Head",
+      linkedin: "https://www.linkedin.com/in/akshat-garg-a188b7230/"
+    },
+    {
+      name: "Ayush Kumar Singh",
+      role: "Head",
+      linkedin: "https://www.linkedin.com/in/ayush-kumar-singh-7763b733a/"
+    },
+    {
+      name: "Kartik Raj",
+      role: "Head",
+      linkedin: "https://www.linkedin.com/in/kartikr23/"
     }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-card">
+    <section id="contact" className="py-20 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={contactRef} className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Get In <span className="text-primary">Touch</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Ready to collaborate on meaningful projects? Let's connect and explore how we can create impact together.
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Get In Touch</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Contact us via LinkedIn or email directly. We're always happy to connect!
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Contact Information */}
-          <div ref={leftRef} className="space-y-8 animate-from-left">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Connect With Us</h3>
-              <div className="space-y-4">
-                {contactMethods.map((method, index) => (
-                  <Card key={index} className="bg-gradient-card border-border hover:shadow-primary transition-smooth group">
-                    <CardContent className="p-6">
-                      <a 
-                        href={method.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-4 group-hover:scale-105 transition-transform"
-                      >
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                          <method.icon className={`w-6 h-6 text-primary transition-smooth ${method.color}`} />
-                        </div>
-                        <div>
-                          <div className="text-sm text-muted-foreground">{method.label}</div>
-                          <div className="text-lg font-semibold text-foreground group-hover:text-primary transition-smooth">
-                            {method.value}
-                          </div>
-                        </div>
-                      </a>
-                    </CardContent>
-                  </Card>
-                ))}
+        <div ref={contactRef} className="animate-on-scroll">
+          {/* Primary Contact */}
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="bg-gradient-card p-8 rounded-2xl border border-border shadow-card">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-foreground mb-2">Primary Contact</h3>
+                <p className="text-muted-foreground">Reach out to our president directly</p>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Office Information</h3>
-              <div className="space-y-4">
-                {officeInfo.map((info, index) => (
-                  <div key={index} className="flex items-center space-x-4 p-4 bg-gradient-card rounded-lg border border-border">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                      <info.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">{info.label}</div>
-                      <div className="text-foreground font-medium">{info.value}</div>
-                    </div>
-                  </div>
-                ))}
+              
+              <div className="flex flex-col items-center gap-4">
+                <div className="text-center">
+                  <p className="text-xl font-semibold text-foreground">{teamContacts[0].name}</p>
+                  <p className="text-muted-foreground">{teamContacts[0].role}</p>
+                </div>
+                
+                <div className="flex gap-4">
+                  <a
+                    href={`mailto:${teamContacts[0].email}`}
+                    className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:shadow-glow transition-smooth group"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>{teamContacts[0].email}</span>
+                  </a>
+                  
+                  <a
+                    href={teamContacts[0].linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 bg-[#0A66C2] text-white rounded-lg hover:opacity-90 transition-smooth"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
               </div>
-            </div>
-
-            <div className="p-6 bg-gradient-card rounded-lg border border-border">
-              <h4 className="text-lg font-semibold text-foreground mb-3">Ready to Collaborate?</h4>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                Whether you're a startup looking for strategic consulting, an organization seeking social impact solutions, or a student interested in joining our network, we'd love to hear from you.
-              </p>
-              <Button className="w-full bg-gradient-primary hover:shadow-glow transition-smooth">
-                <Mail className="w-4 h-4 mr-2" />
-                Send us a Message
-              </Button>
             </div>
           </div>
 
-          {/* Visual Element */}
-          <div ref={rightRef} className="relative animate-from-right">
-            <div className="rounded-2xl overflow-hidden shadow-card">
-              <img 
-                src={globalNetworkImage} 
-                alt="Global ShARE Network" 
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-primary/20 flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <h3 className="text-3xl font-bold mb-2">Global Network</h3>
-                  <p className="text-xl opacity-90">Connecting minds across continents</p>
-                  <div className="mt-6 grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-2xl font-bold">2852+</div>
-                      <div className="text-sm opacity-80">Students</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold">98</div>
-                      <div className="text-sm opacity-80">Universities</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold">41</div>
-                      <div className="text-sm opacity-80">Countries</div>
-                    </div>
+          {/* Team Contacts */}
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Connect with Our Team</h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {teamContacts.map((contact, index) => (
+                <div
+                  key={index}
+                  className="bg-card p-6 rounded-lg border border-border hover:shadow-card transition-smooth group"
+                >
+                  <div className="mb-4">
+                    <p className="font-semibold text-foreground">{contact.name}</p>
+                    <p className="text-sm text-muted-foreground">{contact.role}</p>
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    {contact.email && (
+                      <a
+                        href={`mailto:${contact.email}`}
+                        className="flex items-center gap-2 text-sm text-primary hover:underline"
+                      >
+                        <Mail className="w-4 h-4" />
+                      </a>
+                    )}
+                    <a
+                      href={contact.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-[#0A66C2] hover:underline"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                      <span>LinkedIn</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
                   </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Instagram */}
+          <div className="max-w-3xl mx-auto mt-12">
+            <div className="bg-gradient-card p-8 rounded-2xl border border-border shadow-card text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Follow Us</h3>
+              <p className="text-muted-foreground mb-6">Stay updated with our latest activities and events</p>
+              <a
+                href="https://www.instagram.com/share.iitk/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white rounded-lg hover:shadow-glow transition-smooth"
+              >
+                <Instagram className="w-6 h-6" />
+                <span className="font-semibold">@share.iitk</span>
+              </a>
             </div>
           </div>
         </div>

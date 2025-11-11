@@ -202,7 +202,7 @@ const Team = () => {
         </div>
 
         {/* President */}
-        <div ref={leadershipRef} className="animate-on-scroll mb-16">
+        <div className="animate-fade-in mb-16">
           <h3 className="text-2xl font-bold text-foreground mb-8 text-center">President</h3>
           <div className="max-w-md mx-auto">
             <TeamMemberCard member={leadership[0]} />
