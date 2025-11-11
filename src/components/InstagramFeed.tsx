@@ -1,5 +1,10 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Instagram } from "lucide-react";
+import image1 from "../../public/images/image1.jpg"
+import image2 from "../../public/images/image2.jpg"
+import image3 from "../../public/images/image3.jpg"
+import image4 from "../../public/images/image4.jpg"
+import image5 from "../../public/images/image5.jpg"
 import {
   Carousel,
   CarouselContent,
@@ -15,31 +20,31 @@ const InstagramFeed = () => {
   const instagramPosts = [
     {
       id: 1,
-      image: "../../public/images/image1.jpg",
+      image: image1,
       caption: "CFA Guidance session",
       link: "https://www.instagram.com/p/DQfP435E24H/"
     },
     {
       id: 2,
-      image: "../public/images/image2.jpg",
+      image: image2,
       caption: "MBA Guidance Session",
       link: "https://www.instagram.com/p/DMxzN5yT6pJ/"
     },
     {
       id: 3,
-      image: "../public/images/image3.jpg",
+      image: image3,
       caption: "Meet our complete team",
       link: "https://www.instagram.com/p/DLHvd-MM-KO/?img_index=1"
     },
     {
       id: 4,
-      image: "../public/images/image4.jpg",
+      image: image4,
       caption: "We are back!!!",
       link: "https://www.instagram.com/p/DKL92mrsjEJ/?img_index=1"
     },
     {
       id: 5,
-      image: "../public/images/image5.jpg",
+      image: image5,
       caption: "Past Tenure projects",
       link: "https://www.instagram.com/p/Cue2hy5p1NE/?img_index=1/"
     }
