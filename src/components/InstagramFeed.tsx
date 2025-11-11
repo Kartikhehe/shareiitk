@@ -15,33 +15,33 @@ const InstagramFeed = () => {
   const instagramPosts = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=500&fit=crop",
-      caption: "Team collaboration at ShARE IITK",
-      link: "https://www.instagram.com/share.iitk/"
+      image: "../src/assets/image1.png",
+      caption: "CFA Guidance session",
+      link: "https://www.instagram.com/p/DQfP435E24H/"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=500&h=500&fit=crop",
-      caption: "Strategic consulting workshop",
-      link: "https://www.instagram.com/share.iitk/"
+      image: "../src/assets/image2.png",
+      caption: "MBA Guidance Session",
+      link: "https://www.instagram.com/p/DMxzN5yT6pJ/"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop",
-      caption: "Global network meeting",
-      link: "https://www.instagram.com/share.iitk/"
+      image: "../src/assets/image3.png",
+      caption: "Meet our complete team",
+      link: "https://www.instagram.com/p/DLHvd-MM-KO/?img_index=1"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&h=500&fit=crop",
-      caption: "Leadership development session",
-      link: "https://www.instagram.com/share.iitk/"
+      image: "../src/assets/image4.png",
+      caption: "We are back!!!",
+      link: "https://www.instagram.com/p/DKL92mrsjEJ/?img_index=1"
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=500&fit=crop",
-      caption: "DO WELL DO GOOD in action",
-      link: "https://www.instagram.com/share.iitk/"
+      image: "../src/assets/image5.png",
+      caption: "Past Tenure projects",
+      link: "https://www.instagram.com/p/Cue2hy5p1NE/?img_index=1/"
     }
   ];
 

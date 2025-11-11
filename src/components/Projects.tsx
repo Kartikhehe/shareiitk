@@ -39,7 +39,7 @@ const Projects = () => {
 
   const clientProjects = [
     {
-      title: "AgriVision Business Model Innovation",
+      title: "Enest (previously AgriVision4U) Business Model Innovation",
       company: "AgriVision",
       logo: agrivisionLogo,
       description: "Collaborating with AgriVision to diversify from agriculture into new business verticals through innovation-driven partnerships and cross-sector expansion.",

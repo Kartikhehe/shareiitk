@@ -5,6 +5,13 @@ import akshatImage from "@/assets/akshat-chouksey.jpg";
 import shikiharImage from "@/assets/shikihar-chaudhary.jpg";
 import manyaImage from "@/assets/manya-gupta.jpg";
 import keshavImage from "@/assets/keshav-khandelwal.jpg";
+import Kartikimage from "@/assets/kartik.jpg";
+import Ayushimage from "@/assets/ayush.jpg";
+import Akshatimage from "@/assets/akshat.jpg";
+import Adityaimage from "@/assets/aditya.jpg";
+import Khushimage from "@/assets/khush.jpg";
+import Aayushmanimage from "@/assets/aayushman.jpg";
+
 import { useState } from "react";
 
 interface TeamMember {
@@ -111,6 +118,7 @@ const Team = () => {
       name: "Aayushman Kumar", 
       position: "Head",
       department: "Civil Engineering",
+      image: Aayushmanimage,
       info: "3rd Year | Upcoming SDE intern at Flipkart",
       linkedin: "https://www.linkedin.com/in/aayushmankumar"
     },
@@ -118,6 +126,7 @@ const Team = () => {
       name: "Aditya Sati", 
       position: "Head",
       department: "Civil Engineering",
+      image: Adityaimage,
       info: "3rd Year | Upcoming Summer Intern at Battery Smart as Strategy and Operations Intern",
       linkedin: "https://www.linkedin.com/in/aditya-sati-55a94a2a3/"
     },
@@ -125,6 +134,7 @@ const Team = () => {
       name: "Akshat Garg", 
       position: "Head",
       department: "Materials Science and Engineering",
+      image: Akshatimage,
       info: "3rd Year | Upcoming Intern at Deutsche Bank",
       linkedin: "https://www.linkedin.com/in/akshat-garg-a188b7230/"
     },
@@ -132,12 +142,14 @@ const Team = () => {
       name: "Ayush Kumar Singh", 
       position: "Head",
       department: "Business",
+      image: Ayushimage,
       info: "Incoming intern at BNY Mellon",
       linkedin: "https://www.linkedin.com/in/ayush-kumar-singh-7763b733a/"
     },
     { 
       name: "Kartik Raj", 
       position: "Head",
+      image: Kartikimage,
       department: "Mechanical Engineering",
       info: "3rd Year | Incoming SDE intern at IBY, Japan",
       linkedin: "https://www.linkedin.com/in/kartikr23/"
@@ -145,6 +157,7 @@ const Team = () => {
     { 
       name: "Khush Maheshwari", 
       position: "Head",
+      image: Khushimage,
       department: "Economic Sciences",
       info: "3rd Year | Upcoming summer Intern at Nomura",
       linkedin: "https://www.linkedin.com/in/khush-maheshwari-031187274/"
