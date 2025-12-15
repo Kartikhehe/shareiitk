@@ -7,7 +7,7 @@ const Hero = () => {
   const heroRef = useScrollAnimation();
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-16 relative overflow-hidden">
+    <section id="home" className="min-h-[100svh] flex items-center pt-16 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <img 
