@@ -15,7 +15,7 @@ const Contact = () => {
     {
       name: "Manya Gupta",
       role: "Vice President",
-      linkedin: "https://www.linkedin.com/in/manya-gupta/"
+      linkedin: "https://www.linkedin.com/in/manya-gupta-427631250/"
     },
     {
       name: "Keshav Khandelwal",

@@ -63,7 +63,7 @@ const About = () => {
               <img 
                 src={teamImage} 
                 alt="ShARE Team Collaboration" 
-                className="w-full h-96 object-cover"
+                className="w-full h-64 sm:h-80 md:h-96 object-contain sm:object-cover"
               />
             </div>
           </div>

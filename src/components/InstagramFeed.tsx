@@ -1,10 +1,10 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Instagram } from "lucide-react";
-import image1 from "../../public/images/image1.jpg"
-import image2 from "../../public/images/image2.jpg"
-import image3 from "../../public/images/image3.jpg"
-import image4 from "../../public/images/image4.jpg"
-import image5 from "../../public/images/image5.jpg"
+import image1 from "@/assets/image1.jpg";
+import image2 from "@/assets/image2.jpg";
+import image3 from "@/assets/image3.jpg";
+import image4 from "@/assets/image4.jpg";
+import image5 from "@/assets/image5.jpg";
 import {
   Carousel,
   CarouselContent,

@@ -1,16 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Briefcase, Award, Globe, Linkedin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import akshatImage from "../../public/images/akshat-chouksey.jpg";
-import shikiharImage from "../../public/images/shikihar-chaudhary.jpg";
-import manyaImage from "../../public/images/manya-gupta.jpg";
-import keshavImage from "../../public/images/keshav-khandelwal.jpg";
-import Kartikimage from "../../public/images/kartik.jpg";
-import Ayushimage from "../../public/images/ayush.jpg";
-import Akshatimage from "../../public/images/akshat.jpg";
-import Adityaimage from "../../public/images/aditya.jpg";
-import Khushimage from "../../public/images/khush.jpg";
-import Aayushmanimage from "../../public/images/aayushman.jpg";
+import akshatImage from "@/assets/akshat-chouksey.jpg";
+import shikiharImage from "@/assets/shikihar-chaudhary.jpg";
+import manyaImage from "@/assets/manya-gupta.jpg";
+import keshavImage from "@/assets/keshav-khandelwal.jpg";
+import Kartikimage from "@/assets/kartik.jpg";
+import Ayushimage from "@/assets/ayush.jpg";
+import Akshatimage from "@/assets/akshat.jpg";
+import Adityaimage from "@/assets/aditya.jpg";
+import Khushimage from "@/assets/khush.jpg";
+import Aayushmanimage from "@/assets/aayushman.jpg";
 
 import { useState } from "react";
 
@@ -84,31 +84,31 @@ const Team = () => {
       position: "President",
       department: "Electrical Engineering",
       image: akshatImage,
-      info: "4th year undergrad | VC @Campus fund | President, ShARE IITK | Ex GenAI Intern @PwC",
+      info: "4th year Undergrad | Incoming Analyst @ Snapmint | VC @Campus fund | President, ShARE IITK | Ex GenAI Intern @PwC",
       linkedin: "https://www.linkedin.com/in/akshat-chouksey-034539253/"
     },
     {
       name: "Keshav Khandelwal",
       position: "Vice President, Startups",
-      department: "Business Development",
+      department: "Biological Sciences and Bioengineering",
       image: keshavImage,
-      info: "Full Stack intern at GrubWala",
+      info: "4th year Undergrad | Ex-intern at GrubWala",
       linkedin: "https://www.linkedin.com/in/keshav-khandelwal-6b0270184/"
     },
     {
       name: "Manya Gupta",
       position: "Vice President, Events & Internal Affairs",
-      department: "Operations",
+      department: "Chemical Engineering",
       image: manyaImage,
-      info: "Business Analyst Intern @Vedanta Ltd. | 4th year undergrad",
-      linkedin: "https://www.linkedin.com/in/manya-gupta"
+      info: "4th year Undergrad | Incoming Data Analyst @ Blackrock | Business Analyst Intern @Vedanta Ltd.",
+      linkedin: "https://www.linkedin.com/in/manya-gupta-427631250/"
     },
     {
       name: "Shikhar Chaudhary",
       position: "Vice President, External Affairs",
-      department: "External Relations",
+      department: "Material Science and Engineering",
       image: shikiharImage,
-      info: "4th year undergrad",
+      info: "4th year Undergrad | Incoming Data Analyst @ Blackrock",
       linkedin: "https://www.linkedin.com/in/shikhar-chaudhary-03bb61255/"
     }
   ];
@@ -141,9 +141,9 @@ const Team = () => {
     { 
       name: "Ayush Kumar Singh", 
       position: "Head",
-      department: "Business",
+      department: "Mechanical Engineering",
       image: Ayushimage,
-      info: "Incoming intern at BNY Mellon",
+      info: "3rd Year | Incoming intern at BNY Mellon",
       linkedin: "https://www.linkedin.com/in/ayush-kumar-singh-7763b733a/"
     },
     { 
