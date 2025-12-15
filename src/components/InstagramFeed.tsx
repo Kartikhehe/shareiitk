@@ -100,8 +100,8 @@ const InstagramFeed = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 bg-card border-border" />
-            <CarouselNext className="-right-4 bg-card border-border" />
+            <CarouselPrevious className="left-2 sm:-left-4 bg-card border-border" />
+            <CarouselNext className="right-2 sm:-right-4 bg-card border-border" />
           </Carousel>
 
           <div className="text-center mt-8">
