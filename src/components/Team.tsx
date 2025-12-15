@@ -116,7 +116,7 @@ const Team = () => {
   const heads = [
     { 
       name: "Aayushman Kumar", 
-      position: "Head",
+      position: "Head, Internal Affairs",
       department: "Civil Engineering",
       image: Aayushmanimage,
       info: "3rd Year | Upcoming SDE intern at Flipkart",
@@ -124,7 +124,7 @@ const Team = () => {
     },
     { 
       name: "Aditya Sati", 
-      position: "Head",
+      position: "Head, Startups",
       department: "Civil Engineering",
       image: Adityaimage,
       info: "3rd Year | Upcoming Summer Intern at Battery Smart as Strategy and Operations Intern",
@@ -132,7 +132,7 @@ const Team = () => {
     },
     { 
       name: "Akshat Garg", 
-      position: "Head",
+      position: "Head, Internal Affairs",
       department: "Materials Science and Engineering",
       image: Akshatimage,
       info: "3rd Year | Upcoming Intern at Deutsche Bank",
@@ -140,7 +140,7 @@ const Team = () => {
     },
     { 
       name: "Ayush Kumar Singh", 
-      position: "Head",
+      position: "Head, Startups",
       department: "Mechanical Engineering",
       image: Ayushimage,
       info: "3rd Year | Incoming intern at BNY Mellon",
@@ -148,7 +148,7 @@ const Team = () => {
     },
     { 
       name: "Kartik Raj", 
-      position: "Head",
+      position: "Head, Startups",
       image: Kartikimage,
       department: "Mechanical Engineering",
       info: "3rd Year | Incoming SDE intern at IBY, Japan",
@@ -156,7 +156,7 @@ const Team = () => {
     },
     { 
       name: "Khush Maheshwari", 
-      position: "Head",
+      position: "Head, Design",
       image: Khushimage,
       department: "Economic Sciences",
       info: "3rd Year | Upcoming summer Intern at Nomura",
@@ -232,9 +232,9 @@ const Team = () => {
           </div>
         </div>
 
-        {/* Department Heads */}
+        {/* Heads */}
         <div ref={headsRef} className="animate-from-right">
-          <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Department Heads</h3>
+          <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Heads</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {heads.map((head, index) => (
               <TeamMemberCard key={index} member={head} isHead />
