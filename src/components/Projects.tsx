@@ -52,8 +52,8 @@ const Projects = () => {
       ]
     },
     {
-      title: "ApniBaat User Experience Enhancement",
-      company: "ApniBaat",
+      title: "g8trips.com (previously Apnibaat.ai) User Experience Enhancement",
+      company: "g8trips.com (previously Apnibaat.ai)",
       logo: apnibaatLogo,
       description: "Improving product features and user interface while driving targeted outreach through social media campaigns and building an active user community.",
       status: "Active",
