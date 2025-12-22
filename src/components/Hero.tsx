@@ -59,7 +59,7 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="hero-fade-in-delay">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-primary hover:shadow-glow transition-smooth group">
+                <Button className="bg-gradient-primary hover:shadow-glow transition-smooth group" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
                   Explore Our Work
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
